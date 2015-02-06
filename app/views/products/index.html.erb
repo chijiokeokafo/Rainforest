@@ -1,2 +1,14 @@
-<h1>Products#index</h1>
-<p>Find me in app/views/products/index.html.erb</p>
+<h1>Welcome To Rainforest!</h1>
+
+<h2>Recent</h2>
+<ul>
+	<% @products.each do |p| %>
+	<li><%= link_to(p) do %>
+  		<%= p.name %>
+  		<%= p.formatted_price %>
+		<% end %>
+ 	<% end%>
+ 	</li>
+
+</ul>
+<h1><%= link_to "Post a Product!", "/products/new" %></h1>
